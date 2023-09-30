@@ -1,0 +1,15 @@
+$font-stack: Helvetica, sans-serif;
+$primary-color: #333;
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  &__input {
+    font-style:bold;
+    padding: 8px;
+    width: 150px;
+    font: 100% $font-stack;
+    border: 1px solid grey;
+    border-radius: 4px;
+  }
+}
