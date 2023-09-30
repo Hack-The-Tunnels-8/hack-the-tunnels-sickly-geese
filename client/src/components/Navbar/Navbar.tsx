@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import { useAccountContext } from "../../context";
 import "./Navbar.style.scss";
+import logo from "./TheHomeDepot.svg"
 
 function Navbar() {
   const { loggedIn, logout } = useAccountContext();
@@ -10,7 +11,9 @@ function Navbar() {
   return (
     <div className="navbar">
       <div className="navbar__logo">
-        <Link to="/">Store Logo</Link>
+        <Link to="/">
+          <img src={logo} alt="" />
+        </Link>
       </div>
       <div className="navbar__account">
         {loggedIn() === false ? (
