@@ -23,28 +23,6 @@ export const findMany = async (ids: string[]): Promise<Product[]> => {
   return products;
 };
 
-export const updateProduct = async (productId: string, updatedAttributes: any) => {
-  try{
-    //check if product exists
-    const existingProduct = await prisma.product.findUnique({
-      where: { id: productId},
-    });
-
-    if (!existingProduct){
-      return null;
-    }
-
-    //only update products referenced in request
-    const updatedProduct = await prisma.product.update({
-      where: {id: productId},
-      data: updatedAttributes,
-    });
-    return updateProduct
-  } catch (error){
-    throw new Error("Error updating product")
-  }
-}
-
 export const create = async (
   title: string,
   description: string,
