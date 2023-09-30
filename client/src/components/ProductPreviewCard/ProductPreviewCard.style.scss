@@ -1,4 +1,15 @@
 .product-preview-card {
+  background-color: lightgray;
+  display: inline-block;
+  margin: 10px;
+  padding: 20px;
+  cursor: pointer;
+  transition: 0.2s ease;
+  &:hover {
+    box-shadow: 0 10px 20px 1px gray;
+    transform: scale(1.03);
+  }
+
   &__title {
     font-style: bold;
     color: green;
@@ -9,6 +20,12 @@
   }
 
   &__image {
-    width: 10rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    background: #fff;
+    width: fit-content;
   }
 }
